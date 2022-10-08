@@ -1,0 +1,22 @@
+1. what is prototype design pattern?
+  i.suppose we need to create 1000 student objects. student has 100 attributes(parameters). 95 parameters are common accross all 1000 objects. 
+    instead of creating all new 1000 objects and setting 100 parametrs for every object creation we clone the first object created and change only 5 parameters.
+2. prototype registry:
+         1. might want to create different types of users. A user with a Student role, a user with a
+            Teacher role, and a user with an Admin role. Each such different type of user might have some fields that
+            are specific to the type so the fields to be copied might be different. We can create a registry of pre-defined
+            prototypes for each of these roles.
+            interface UserRegistry {
+            User getPrototype(UserRole role);
+            void addPrototype(UserRole role, User user);
+            }
+prototype registry vs factory:
+  1. in factory we dont get the attribute values in the obejct we get object
+  2. in prototype registry we get all the attribute we set in the first object
+  3. in prototype registry we can set the key and object then get the clone of same object 
+  
+2. use cases:
+    i. when it's hard to create a new instance we create instance at first time and reuse for next time onwords.
+    eg: college assignments, games graphics objects ( suppose we have tree object then we keep the created the tree object and change the x and y axis parameters for next obejcts)
+    and testing( when creating a object takes time like api call. so we create obejct with api call one time and from next time he will copy the first obeject.)
+    ii> 
