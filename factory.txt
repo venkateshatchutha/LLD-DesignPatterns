@@ -1,0 +1,7 @@
+simple factory:
+  we create a factory class and a static method to create and return requested object. 
+  we can use switch case with enum to check and return respective object.
+factory method:
+  the simple factory is very redundent and if we want to add new type we have to modify the existing method.
+  simple factory violates SRP and OCP principles.
+  so we create multiple child classes for diffent types.
